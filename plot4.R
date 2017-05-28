@@ -2,6 +2,10 @@
 #
 # Looks like we are making plots this week
 #Plot4
+
+###Please NOTE: after hours (and i mean hours) working on this plot, i could not get the legend to
+#appear correctly!
+
 setwd("/Users/tonie.vandam/Downloads/data_science/exp_data_analy/week_1/project")
 data<-read.table("household_power_consumption.txt",header=TRUE,sep=";",na.strings = "?")
 data$Date <- as.Date(data$Date, format = "%d/%m/%Y")
