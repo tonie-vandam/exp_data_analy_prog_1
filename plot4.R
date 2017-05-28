@@ -22,11 +22,13 @@ with(data,plot(datetime,Global_active_power,type="l",ylab="Global Active Power (
 #plot (1,2)
 with(data,plot(datetime,Voltage,type="l",ylab="Voltage"))
 #plot (2,1)
-with(data,plot(datetime,Sub_metering_1,type="l",ylab="Energy sub metering",xlab=" "))
-with(data,lines(datetime,Sub_metering_2,type="l",col="red"))
-with(data,lines(datetime,Sub_metering_3,type="l",col="blue"))
-legend("topright",lty=1,col=c("black", "red", "blue"),
-       legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),cex = 0.6,y.intersp=0.25)
+with(data, plot(datetime, Sub_metering_1, type = "n", ann = F))
+with(data, lines(datetime, Sub_metering_1, col="black"))
+with(data, lines(datetime, Sub_metering_2, col="red"))
+with(data, lines(datetime, Sub_metering_3, col="blue"))
+title(ylab = "Energy sub metering")
+legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), 
+       col = c("black","red","blue"), lty = 1)
 #plot(2,2)
 with(data,plot(datetime,Global_reactive_power,type="l",ylab="Global_reactive_power"))
 #output the plot
